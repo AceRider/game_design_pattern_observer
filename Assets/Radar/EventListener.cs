@@ -1,18 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class EventListener : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Event gEvent;
+    public UnityEvent response;
+
+    private void OnEnable()
     {
-        
+        gEvent.Register(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        gEvent.Unregister(this);
+    }
+
+    public void OnEventOccurs()
+    {
+        response.Invoke();
     }
 }
