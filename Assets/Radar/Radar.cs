@@ -12,6 +12,7 @@ public class RadarObject
 public class Radar : MonoBehaviour
 {
     public Transform playerPos;
+    public Image eggIcon;
 
     float mapScale = 2.0f;
 
@@ -64,4 +65,9 @@ public class Radar : MonoBehaviour
         DrawRadarDots();
     }
 
+    public void ItemDropped(GameObject go)
+    {
+        Debug.Log("Item Dropped");
+        RegisterRadarObject(go, eggIcon);
+    }
 }

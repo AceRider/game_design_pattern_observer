@@ -1791,6 +1791,7 @@ GameObject:
   - component: {fileID: 1472236089}
   - component: {fileID: 1472236091}
   - component: {fileID: 1472236092}
+  - component: {fileID: 1472236093}
   m_Layer: 5
   m_Name: Radar
   m_TagString: Untagged
@@ -1880,6 +1881,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 1792587451}
+  eggIcon: {fileID: 8400443487031834476, guid: 3d47612b3f1e01144865e8d0151fcbf4, type: 3}
+--- !u!114 &1472236093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472236087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811519e35c5d0204c9c57cf5fb764677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gEvent: {fileID: 11400000, guid: e4408cad3c776ee42bf66cc28070cb2c, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1472236092}
+        m_MethodName: ItemDropped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1514041140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +1995,7 @@ MonoBehaviour:
   eggPrefab: {fileID: 8387525112746057275, guid: 24cc6a278dfced241a0c00fd4958a6a1,
     type: 3}
   terrain: {fileID: 194105728}
+  eggDrop: {fileID: 11400000, guid: e4408cad3c776ee42bf66cc28070cb2c, type: 2}
 --- !u!4 &1697451750
 Transform:
   m_ObjectHideFlags: 0
